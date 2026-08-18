@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --primary-color: #1b382b;      /* 깊은 숲색 */
-            --secondary-color: #4a7051;    /* 세이지 그린 */
-            --accent-color: #c68b59;       /* 따뜻한 테라코타 오크 */
-            --bg-warm: #fcfaf4;             /* 따스한 아이보리 */
+            --primary-color: #1b382b;
+            --secondary-color: #4a7051;
+            --accent-color: #c68b59;
+            --bg-warm: #fcfaf4;
             --card-bg: #ffffff;
             --text-main: #232723;
             --text-sub: #525a53;
@@ -33,62 +33,64 @@
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
             background-color: #f2f4f0;
             color: var(--text-main);
-            line-height: 1.7;
-            padding: 50px 20px;
+            line-height: 1.6;
+            padding: 20px 10px;
+            word-break: keep-all;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 980px;
+            max-width: 900px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 70px 85px;
+            padding: 40px 35px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
             border: 1px solid rgba(226, 231, 225, 0.8);
+            width: 100%;
         }
 
         /* Header Section */
         .report-header {
             border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 35px;
-            margin-bottom: 40px;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .report-category {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 700;
             color: var(--accent-color);
-            letter-spacing: 2.5px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .report-title {
             font-family: 'Noto Serif KR', serif;
-            font-size: 2.3rem;
+            font-size: 2.1rem;
             font-weight: 700;
             color: var(--primary-color);
             line-height: 1.35;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
 
         .report-subtitle {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-sub);
             font-weight: 400;
-            word-break: keep-all;
         }
 
         .meta-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 24px;
-            margin-top: 28px;
-            font-size: 0.92rem;
+            gap: 16px;
+            margin-top: 20px;
+            font-size: 0.88rem;
             color: var(--text-sub);
             background: var(--bg-warm);
-            padding: 14px 24px;
+            padding: 12px 18px;
             border-radius: 10px;
             border: 1px solid var(--border-soft);
         }
@@ -96,7 +98,7 @@
         .meta-info span {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .meta-info i {
@@ -107,67 +109,60 @@
         .philosophy-card {
             background: linear-gradient(135deg, #fcfaf4 0%, #f4efe2 100%);
             border-left: 5px solid var(--accent-color);
-            padding: 30px 35px;
+            padding: 22px 26px;
             border-radius: 0 14px 14px 0;
-            margin-bottom: 55px;
+            margin-bottom: 35px;
             box-shadow: var(--shadow-subtle);
         }
 
         .philosophy-card h3 {
             font-family: 'Noto Serif KR', serif;
             color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+            font-size: 1.18rem;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .philosophy-card p {
-            font-size: 1.02rem;
+            font-size: 0.96rem;
             color: #38423b;
-            line-height: 1.75;
-            word-break: keep-all;
+            line-height: 1.65;
         }
 
         /* Section Styling */
         .section-title {
             font-family: 'Noto Serif KR', serif;
-            font-size: 1.6rem;
+            font-size: 1.45rem;
             color: var(--primary-color);
-            margin-bottom: 30px;
-            padding-bottom: 12px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
             border-bottom: 2px solid var(--border-soft);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .section-title i {
             color: var(--secondary-color);
-            font-size: 1.4rem;
+            font-size: 1.25rem;
         }
 
         /* Activity Cards Stack */
         .activity-grid {
             display: flex;
             flex-direction: column;
-            gap: 35px;
-            margin-bottom: 55px;
+            gap: 30px;
+            margin-bottom: 40px;
         }
 
         .activity-card {
             border: 1px solid var(--border-soft);
             border-radius: 14px;
-            padding: 32px;
+            padding: 26px;
             background: #ffffff;
             box-shadow: var(--shadow-subtle);
-            transition: all 0.25s ease;
-        }
-
-        .activity-card:hover {
-            border-color: var(--secondary-color);
-            box-shadow: 0 12px 28px rgba(27, 56, 43, 0.08);
         }
 
         .activity-header {
@@ -175,38 +170,33 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 16px;
+            gap: 10px;
+            margin-bottom: 12px;
         }
 
         .activity-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--primary-color);
-            font-family: 'Pretendard', sans-serif;
         }
 
         .activity-badge {
             background-color: var(--badge-bg);
             color: var(--badge-text);
-            padding: 6px 16px;
+            padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.83rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            white-space: nowrap;
-            display: inline-flex;
-            align-items: center;
-            flex-shrink: 0;
             border: 1px solid #d4e2d6;
         }
 
         .activity-meta {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: var(--text-sub);
-            margin-bottom: 22px;
+            margin-bottom: 16px;
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 16px;
         }
 
         .activity-meta span {
@@ -219,11 +209,11 @@
             color: var(--secondary-color);
         }
 
-        /* Table Structure for Process/Outcome */
+        /* Table Structure - Responsive Fix */
         .activity-details {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 22px;
+            margin-bottom: 16px;
         }
 
         .activity-details tr {
@@ -235,39 +225,38 @@
         }
 
         .activity-details th, .activity-details td {
-            padding: 12px 14px;
+            padding: 10px 8px;
             text-align: left;
             vertical-align: top;
-            font-size: 0.95rem;
-            line-height: 1.65;
+            font-size: 0.92rem;
+            line-height: 1.6;
         }
 
         .activity-details th {
-            width: 16%;
-            min-width: 90px;
+            width: 85px;
             font-weight: 600;
             color: var(--primary-color);
             background: #f7f9f6;
             border-radius: 6px;
             text-align: center;
+            white-space: nowrap;
         }
 
         .activity-details td {
             color: var(--text-main);
-            padding-left: 20px;
+            padding-left: 12px;
         }
 
-        /* Photo & Media Grid with Height Alignment */
+        /* Photo & Media Grid */
         .photo-gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 18px;
-            margin-top: 18px;
-            align-items: stretch;
+            gap: 14px;
+            margin-top: 14px;
         }
 
         .photo-container {
-            flex: 1 1 260px;
+            flex: 1 1 200px;
             max-width: 100%;
             display: flex;
             flex-direction: column;
@@ -275,13 +264,13 @@
             align-items: center;
             background: #fafbf9;
             border: 1px solid var(--border-soft);
-            padding: 14px;
+            padding: 10px;
             border-radius: 12px;
         }
 
         .photo-wrapper {
             width: 100%;
-            height: 280px;
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -297,31 +286,30 @@
         }
 
         .photo-caption {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: var(--text-sub);
-            margin-top: 12px;
+            margin-top: 8px;
             text-align: center;
-            word-break: keep-all;
             width: 100%;
         }
 
-        /* Embedded Video Player & Media Container */
+        /* Video Container */
         .video-box-container {
             background: var(--bg-warm);
             border: 1px solid var(--border-soft);
-            padding: 20px;
+            padding: 14px;
             border-radius: 12px;
-            margin-top: 20px;
+            margin-top: 16px;
         }
 
         .video-title-bar {
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             font-weight: 700;
             color: var(--primary-color);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .video-player-wrapper {
@@ -333,7 +321,7 @@
 
         .video-player-wrapper video {
             width: 100%;
-            max-height: 420px;
+            max-height: 360px;
             display: block;
         }
 
@@ -342,114 +330,140 @@
             background: #fdfdfc;
             border: 1px solid var(--border-soft);
             border-radius: 16px;
-            padding: 35px;
-            margin-bottom: 45px;
+            padding: 26px;
+            margin-bottom: 35px;
             box-shadow: var(--shadow-subtle);
         }
 
         .interview-header-sub {
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             color: var(--text-sub);
-            margin-top: -20px;
-            margin-bottom: 25px;
+            margin-top: -15px;
+            margin-bottom: 18px;
             display: block;
         }
 
         .interview-quote {
             font-family: 'Noto Serif KR', serif;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: var(--primary-color);
             font-weight: 600;
             background: var(--bg-warm);
             border-left: 5px solid var(--accent-color);
-            padding: 20px 25px;
+            padding: 15px 18px;
             border-radius: 0 10px 10px 0;
-            margin: 25px 0;
-            line-height: 1.65;
-            word-break: keep-all;
+            margin: 18px 0;
+            line-height: 1.6;
         }
 
         .interview-points {
             list-style: none;
             padding: 0;
-            margin-top: 20px;
+            margin-top: 14px;
         }
 
         .interview-points li {
             position: relative;
-            padding-left: 24px;
-            margin-bottom: 12px;
-            font-size: 0.98rem;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
             color: var(--text-main);
         }
 
         .interview-points li::before {
             content: "•";
             color: var(--accent-color);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             position: absolute;
-            left: 5px;
+            left: 2px;
             top: -5px;
         }
 
         .keyword-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 25px;
-            padding-top: 20px;
+            gap: 8px;
+            margin-top: 18px;
+            padding-top: 14px;
             border-top: 1px dashed var(--border-soft);
         }
 
         .keyword-tag {
             background: var(--primary-color);
             color: #ffffff;
-            padding: 6px 16px;
+            padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             font-weight: 500;
-            letter-spacing: 0.3px;
         }
 
-        /* Footer Plan */
         .next-plan-box {
             background: var(--bg-warm);
             border: 1px solid var(--border-soft);
-            padding: 30px;
+            padding: 20px;
             border-radius: 14px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .next-plan-box h3 {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: var(--primary-color);
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-bottom: 10px;
         }
 
         .report-footer {
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-sub);
-            padding-top: 20px;
+            padding-top: 16px;
             border-top: 1px solid var(--border-soft);
         }
 
-        /* Print Settings for PDF Generation */
-        @media print {
+        /* ------------------------------------------------------------------ */
+        /* 📱 모바일 가로폭 완전 구원 CSS (찌그러짐 원천 차단) */
+        /* ------------------------------------------------------------------ */
+        @media screen and (max-width: 600px) {
             body {
-                background: none;
-                padding: 0;
+                padding: 10px 8px !important;
             }
+
             .container {
-                box-shadow: none;
-                padding: 0;
-                border: none;
+                padding: 20px 14px !important;
+                border-radius: 12px !important;
             }
+
+            .report-title {
+                font-size: 1.5rem !important;
+            }
+
+            .meta-info {
+                flex-direction: column !important;
+                gap: 8px !important;
+                padding: 10px 12px !important;
+            }
+
             .activity-card {
-                page-break-inside: avoid;
+                padding: 16px 12px !important;
+            }
+
+            /* 표 모바일 정렬 최적화 */
+            .activity-details th {
+                width: 70px !important;
+                font-size: 0.82rem !important;
+                padding: 6px 2px !important;
+            }
+
+            .activity-details td {
+                padding-left: 8px !important;
+                font-size: 0.88rem !important;
+            }
+
+            .photo-gallery {
+                flex-direction: column !important;
+            }
+
+            .photo-wrapper {
+                height: 190px !important;
             }
         }
     </style>
@@ -513,8 +527,7 @@
                 <div class="photo-gallery">
                     <div class="photo-container">
                         <div class="photo-wrapper">
-                            <!-- Corrected: 가야금 연주 사진 적용 -->
-                            <img src="KakaoTalk_20260818_084353186.jpg" alt="가야금 연주 모습">
+                            <img src="KakaoTalk_20260818_084353186_05.jpg" alt="가야금 연주 모습">
                         </div>
                         <p class="photo-caption">가야금 연주 습득 과정 (아리랑 완곡 연주)</p>
                     </div>
@@ -526,7 +539,7 @@
                         <i class="fa-solid fa-circle-play"></i> 가야금 '아리랑' 실제 연주 영상
                     </div>
                     <div class="video-player-wrapper">
-                        <video controls poster="KakaoTalk_20260818_084353186.jpg">
+                        <video controls poster="KakaoTalk_20260818_084353186_05.jpg">
                             <source src="가야금 아리랑 연주.mp4" type="video/mp4">
                             브라우저가 동영상 재생을 지원하지 않습니다.
                         </video>
@@ -650,7 +663,7 @@
                     </div>
                     <div class="photo-container">
                         <div class="photo-wrapper">
-                            <img src="11111.PNG" alt="탄수화물 대사 교재 정리">
+                            <img src="11111.jpg" alt="탄수화물 대사 교재 정리">
                         </div>
                         <p class="photo-caption">수목생리학 탄수화물 대사 단원 필기 및 정리</p>
                     </div>
@@ -741,15 +754,14 @@
         <h2 class="section-title"><i class="fa-solid fa-quote-left"></i> 철학적 이정표: 황대권 선생님과의 대화</h2>
         <span class="interview-header-sub">(2026년 8월 11일 화요일)</span>
 
-        <p style="font-size: 0.96rem; color: var(--text-sub); line-height: 1.7;">
+        <p style="font-size: 0.95rem; color: var(--text-sub); line-height: 1.7;">
             여러 분야에서의 배움과 실천을 이어가던 중, 황대권 작가님과의 깊은 대화를 통해 진행한 활동들이 통합될 궁극적인 지향점을 정리하게 되었습니다.
         </p>
 
-        <div class="photo-gallery" style="margin-top: 20px; margin-bottom: 25px;">
+        <div class="photo-gallery" style="margin-top: 18px; margin-bottom: 20px;">
             <div class="photo-container">
                 <div class="photo-wrapper">
-                    <!-- Corrected: 백척간두 책 사진 적용 -->
-                    <img src="KakaoTalk_20260818_084353186_05.jpg" alt="다시 백척간두에 서서 도서 표지">
+                    <img src="KakaoTalk_20260818_084353186.jpg" alt="다시 백척간두에 서서 도서 표지">
                 </div>
                 <p class="photo-caption">황대권 저서 『다시 백척간두에 서서』</p>
             </div>

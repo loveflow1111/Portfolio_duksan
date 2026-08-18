@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김민주 개인 보고서 | 배움과 실천의 궤적</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1b382b;      /* 깊은 숲색 */
+            --secondary-color: #4a7051;    /* 세이지 그린 */
+            --accent-color: #c68b59;       /* 따뜻한 테라코타 오크 */
+            --bg-warm: #fcfaf4;             /* 따스한 아이보리 */
+            --card-bg: #ffffff;
+            --text-main: #232723;
+            --text-sub: #525a53;
+            --border-soft: #e2e7e1;
+            --badge-bg: #eaf1eb;
+            --badge-text: #275239;
+            --shadow-subtle: 0 10px 30px rgba(27, 56, 43, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: #f2f4f0;
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 70px 85px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(226, 231, 225, 0.8);
+        }
+
+        /* Header Section */
+        .report-header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 35px;
+            margin-bottom: 40px;
+        }
+
+        .report-category {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .report-title {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.35;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .report-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            font-weight: 400;
+            word-break: keep-all;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 28px;
+            font-size: 0.92rem;
+            color: var(--text-sub);
+            background: var(--bg-warm);
+            padding: 14px 24px;
+            border-radius: 10px;
+            border: 1px solid var(--border-soft);
+        }
+
+        .meta-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-info i {
+            color: var(--secondary-color);
+        }
+
+        /* Philosophy Callout Card */
+        .philosophy-card {
+            background: linear-gradient(135deg, #fcfaf4 0%, #f4efe2 100%);
+            border-left: 5px solid var(--accent-color);
+            padding: 30px 35px;
+            border-radius: 0 14px 14px 0;
+            margin-bottom: 55px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .philosophy-card h3 {
+            font-family: 'Noto Serif KR', serif;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .philosophy-card p {
+            font-size: 1.02rem;
+            color: #38423b;
+            line-height: 1.75;
+            word-break: keep-all;
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-soft);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title i {
+            color: var(--secondary-color);
+            font-size: 1.4rem;
+        }
+
+        /* Activity Cards Stack */
+        .activity-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            margin-bottom: 55px;
+        }
+
+        .activity-card {
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 32px;
+            background: #ffffff;
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.25s ease;
+        }
+
+        .activity-card:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 12px 28px rgba(27, 56, 43, 0.08);
+        }
+
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .activity-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        .activity-badge {
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.83rem;
+            font-weight: 600;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+            border: 1px solid #d4e2d6;
+        }
+
+        .activity-meta {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .activity-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .activity-meta span i {
+            color: var(--secondary-color);
+        }
+
+        /* Table Structure for Process/Outcome */
+        .activity-details {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 22px;
+        }
+
+        .activity-details tr {
+            border-bottom: 1px solid #f0f3ef;
+        }
+
+        .activity-details tr:last-child {
+            border-bottom: none;
+        }
+
+        .activity-details th, .activity-details td {
+            padding: 12px 14px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .activity-details th {
+            width: 16%;
+            min-width: 90px;
+            font-weight: 600;
+            color: var(--primary-color);
+            background: #f7f9f6;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .activity-details td {
+            color: var(--text-main);
+            padding-left: 20px;
+        }
+
+        /* Photo & Media Grid with Height Alignment */
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 18px;
+            align-items: stretch;
+        }
+
+        .photo-container {
+            flex: 1 1 260px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: #fafbf9;
+            border: 1px solid var(--border-soft);
+            padding: 14px;
+            border-radius: 12px;
+        }
+
+        .photo-wrapper {
+            width: 100%;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f2f4f0;
+        }
+
+        .photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .photo-caption {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-top: 12px;
+            text-align: center;
+            word-break: keep-all;
+            width: 100%;
+        }
+
+        /* Embedded Video Player & Media Container */
+        .video-box-container {
+            background: var(--bg-warm);
+            border: 1px solid var(--border-soft);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .video-title-bar {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .video-player-wrapper {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-player-wrapper video {
+            width: 100%;
+            max-height: 420px;
+            display: block;
+        }
+
+        /* Interview Highlight Section */
+        .interview-box {
+            background: #fdfdfc;
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 45px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .interview-header-sub {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            margin-top: -20px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .interview-quote {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            background: var(--bg-warm);
+            border-left: 5px solid var(--accent-color);
+            padding: 20px 25px;
+            border-radius: 0 10px 10px 0;
+            margin: 25px 0;
+            line-height: 1.65;
+            word-break: keep-all;
+        }
+
+        .interview-points {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .interview-points li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            font-size: 0.98rem;
+            color: var(--text-main);
+        }
+
+        .interview-points li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 5px;
+            top: -5px;
+        }
+
+        .keyword-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-soft);
+        }
+
+        .keyword-tag {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* Footer Plan */
+        .next-plan-box {
+            background: var(--bg-warm);
+            border: 1px solid var(--border-soft);
+            padding: 30px;
+            border-radius: 14px;
+            margin-bottom: 40px;
+        }
+
+        .next-plan-box h3 {
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .report-footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            padding-top: 20px;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        /* Print Settings for PDF Generation */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+                border: none;
+            }
+            .activity-card {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <header class="report-header">
+        <div class="report-category">Personal Portfolio & Action Report</div>
+        <h1 class="report-title">배움과 실천의 궤적:<br>내가 서 있는 자리에서의 자아실현</h1>
+        <p class="report-subtitle">예술·지식·생태·노동의 현장에서 체득한 30%의 이론과 70%의 실천 기록</p>
+        
+        <div class="meta-info">
+            <span><i class="fa-regular fa-calendar"></i> 작성일: 2026년 8월 18일</span>
+            <span><i class="fa-regular fa-user"></i> 작성자: 김민주 개인 보고서</span>
+            <span><i class="fa-solid fa-location-dot"></i> 대상/장소: 일상의 배움터 & 텃밭</span>
+        </div>
+    </header>
+
+    <!-- Philosophy Core Anchor -->
+    <section class="philosophy-card">
+        <h3><i class="fa-solid fa-compass"></i> 보고서의 핵심 철학 (Life Philosophy)</h3>
+        <p>
+            <strong>"예술적 선율과 과학적 탐구를 삶으로 실천한, 30%의 이론과 70%의 실천"</strong><br>
+            2026년 8월 11일 황대권 선생님과의 대화를 통해 다져진 이 신념은 본 보고서 전체를 관통하는 핵심 기둥입니다. 관념에 머무르는 공부를 넘어, 손끝으로 짓고 밭을 일구며 예술적 선율과 과학적 탐구를 삶으로 실천한 '주체적 실천가'로서의 발자취를 정리합니다.
+        </p>
+    </section>
+
+    <!-- Activities Chronological Section -->
+    <section>
+        <h2 class="section-title"><i class="fa-solid fa-leaf"></i> 주요 진행 과정 및 성과</h2>
+
+        <div class="activity-grid">
+
+            <!-- Activity 1: 가야금 -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title">1. <작은숲 피아노학원> 가야금 연주 습득</h3>
+                    <span class="activity-badge">예술 / 전통가락</span>
+                </div>
+                <div class="activity-meta">
+                    <span><i class="fa-regular fa-clock"></i> 기간: 2026.04 ~ 2026.08 (총 11회차 진행)</span>
+                    <span><i class="fa-solid fa-location-dot"></i> 장소: 작은숲 피아노학원</span>
+                </div>
+                <table class="activity-details">
+                    <tr>
+                        <th>기획 의도</th>
+                        <td>한국 고유의 전통 악기인 가야금을 통해 손끝의 울림으로 민요의 가락과 정서를 직접 체율 체득하고자 기획함.</td>
+                    </tr>
+                    <tr>
+                        <th>학습 과정</th>
+                        <td>자세 및 튕기기, 농현, 굴림 등 기초 습득 → &lt;동요&gt; 연주 → &lt;아리랑&gt; 연주 → &lt;진도 아리랑&gt; 습득 → &lt;군밤타령&gt; 경쾌한 장단 완성 → &lt;꽃노래&gt; 표현 연마 (단계별 11회차 완성).</td>
+                    </tr>
+                    <tr>
+                        <th>실천 결과</th>
+                        <td>총 5곡 완곡 연주 능력 확보 및 국악 가락의 깊이 있는 정서적 자아 발견.</td>
+                    </tr>
+                </table>
+
+                <div class="photo-gallery">
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <!-- Corrected: 가야금 연주 사진 적용 -->
+                            <img src="KakaoTalk_20260818_084353186.jpg" alt="가야금 연주 모습">
+                        </div>
+                        <p class="photo-caption">가야금 연주 습득 과정 (아리랑 완곡 연주)</p>
+                    </div>
+                </div>
+
+                <!-- Video Integration -->
+                <div class="video-box-container">
+                    <div class="video-title-bar">
+                        <i class="fa-solid fa-circle-play"></i> 가야금 '아리랑' 실제 연주 영상
+                    </div>
+                    <div class="video-player-wrapper">
+                        <video controls poster="KakaoTalk_20260818_084353186.jpg">
+                            <source src="가야금 아리랑 연주.mp4" type="video/mp4">
+                            브라우저가 동영상 재생을 지원하지 않습니다.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 2: 에코백 만들기 -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title">2. <설렘공방> 바느질 기초 및 에코백 완성</h3>
+                    <span class="activity-badge">수작업 / 공예</span>
+                </div>
+                <div class="activity-meta">
+                    <span><i class="fa-regular fa-clock"></i> 기간: 2026.07</span>
+                    <span><i class="fa-solid fa-location-dot"></i> 장소: 설렘공방</span>
+                </div>
+                <table class="activity-details">
+                    <tr>
+                        <th>기획 의도</th>
+                        <td>기성품 소비에서 벗어나, 손수 바느질하는 노동을 통해 일상의 실용품을 직접 만들어 쓰는 정직한 창작 기쁨 실천.</td>
+                    </tr>
+                    <tr>
+                        <th>제작 과정</th>
+                        <td>기초 바느질 기법(홈질, 박음질) 연습 → 원단 재단 및 도안 구성 → 전 과정 손바느질 연결 및 마무리 → 손잡이 결합 및 마감 처리.</td>
+                    </tr>
+                    <tr>
+                        <th>실천 결과</th>
+                        <td>기초 손바느질 기술 완숙 및 세상에 하나뿐인 나만의 패브릭 에코백 1점 완성.</td>
+                    </tr>
+                </table>
+
+                <div class="photo-gallery">
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <img src="KakaoTalk_20260818_084353186_02.jpg" alt="바느질 과정">
+                        </div>
+                        <p class="photo-caption">설렘공방 손바느질 과정 (기초 홈질 및 박음질)</p>
+                    </div>
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <img src="KakaoTalk_20260818_084353186_01.jpg" alt="완성된 에코백">
+                        </div>
+                        <p class="photo-caption">전 과정 손바느질로 완성한 나만의 패브릭 에코백</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 3: 도자 물레 -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title">3. <제천역근처 도자 소리 공방> 마블링 물레 도자기 성형</h3>
+                    <span class="activity-badge">흙과 몰입 / 공예</span>
+                </div>
+                <div class="activity-meta">
+                    <span><i class="fa-regular fa-clock"></i> 기간: 2026.07</span>
+                    <span><i class="fa-solid fa-location-dot"></i> 장소: 도자 소리 공방</span>
+                </div>
+                <table class="activity-details">
+                    <tr>
+                        <th>기획 의도</th>
+                        <td>대지에서 온 '흙'이라는 자연 물질을 중심축(물레) 위에서 제어하며 몰입과 순수한 비움의 순간을 온몸으로 체감.</td>
+                    </tr>
+                    <tr>
+                        <th>제작 과정</th>
+                        <td>색흙을 섞어 혼합 문양을 만드는 마블링 기법 구상 → 물레 성형 작업 → 중심 잡기 및 기형 잡기 → 굽 깎기, 유약 건조 및 가마 소성.</td>
+                    </tr>
+                    <tr>
+                        <th>실천 결과</th>
+                        <td>자연스러운 마블링 패턴이 돋보이는 나만의 독창적인 도자기 기물 완성.</td>
+                    </tr>
+                </table>
+
+                <div class="photo-gallery">
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <img src="KakaoTalk_20260818_084438725.jpg" alt="마블링 도자기">
+                        </div>
+                        <p class="photo-caption">제천역 근처 도자 소리 공방 마블링 물레 완성작</p>
+                    </div>
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <img src="KakaoTalk_20260818_084438725_01.jpg" alt="도자기 바닥 각인">
+                        </div>
+                        <p class="photo-caption">도자기 밑면 바닥 각인 (mj 2026)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 4: 나무의사 공부 -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title">4. 나무의사 과정 독학 (자연 치유 지식 구축)</h3>
+                    <span class="activity-badge">국가전문자격증 과정 (2027 시험 예정)</span>
+                </div>
+                <div class="activity-meta">
+                    <span><i class="fa-regular fa-clock"></i> 기간: 2026.04 ~ 상/하반기 지속 중</span>
+                    <span><i class="fa-solid fa-book"></i> 장소: 자율 독학 탐구</span>
+                </div>
+                <table class="activity-details">
+                    <tr>
+                        <th>기획 의도</th>
+                        <td>자연 생태계의 기둥인 나무의 생리를 과학적으로 이해하고, 병든 수목을 진단·치유하는 깊이 있는 학문적 토대 마련.</td>
+                    </tr>
+                    <tr>
+                        <th>탐구 과목</th>
+                        <td>① 수목생리학  ② 수목병리학  ③ 산림토양학  ④ 수목해충학  ⑤ 수목관리학 (5대 핵심 과목)</td>
+                    </tr>
+                    <tr>
+                        <th>실천 결과</th>
+                        <td>각 과목별 노션 정리 및 체계화, 이론 지식을 바탕으로 주변 수목과 텃밭 생태계를 관찰·진단하는 세밀한 시선 확보.</td>
+                    </tr>
+                </table>
+
+                <div class="photo-gallery">
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <img src="00.PNG" alt="수목생리학 노션 정리">
+                        </div>
+                        <p class="photo-caption">수목생리학 노션 체계화 서머리 노트</p>
+                    </div>
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <img src="11111.PNG" alt="탄수화물 대사 교재 정리">
+                        </div>
+                        <p class="photo-caption">수목생리학 탄수화물 대사 단원 필기 및 정리</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 5: 도시농업관리사 및 텃밭 -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title">5. 도시농업관리사 과정 이수 & 현장 텃밭 실천</h3>
+                    <span class="activity-badge">국가자격증 과정</span>
+                </div>
+                <div class="activity-meta">
+                    <span><i class="fa-regular fa-clock"></i> 기간: 2026.01 ~ 2026.11 (교육) / 2026.05 ~ 현재 (텃밭 실천)</span>
+                    <span><i class="fa-solid fa-location-dot"></i> 장소: 서울도시농업네트워크, 녹색어울림 & 청년마을 텃밭</span>
+                </div>
+                <table class="activity-details">
+                    <tr>
+                        <th>기획 의도</th>
+                        <td>도시와 농업, 인간과 자연을 잇는 매개자 역량을 기르고, 서울을 오가며 배운 이론 교육을 제천 덕산 지역 텃밭에 직접 이식함.</td>
+                    </tr>
+                    <tr>
+                        <th>진행 과정</th>
+                        <td>서울을 왕복하며 도시농업관리사 필수 교육(이론 40시간, 실습 40시간) 이수 → 제천 덕산 지역 텃밭을 일구며 친환경 작물 재배 적용.</td>
+                    </tr>
+                    <tr>
+                        <th>실천 결과</th>
+                        <td>도시농업관리사 수료 및 자격 요건 충족, 생명이 숨 쉬는 친환경 텃밭 가꾸기 일상화.</td>
+                    </tr>
+                </table>
+
+                <div class="photo-gallery">
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <img src="KakaoTalk_20260818_084517619.jpg" alt="고무나무 취목 실습">
+                        </div>
+                        <p class="photo-caption">도시농업관리사 과정 - 고무나무 취목(번식) 실습</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 6: 보석감정사 -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3 class="activity-title">6. 보석감정사 자격 취득 도전 (필기 합격 & 실기 준비)</h3>
+                    <span class="activity-badge">전문자격 / 정교한 관찰</span>
+                </div>
+                <div class="activity-meta">
+                    <span><i class="fa-regular fa-clock"></i> 기간: 2026.06 ~ 진행 중 (9월 실기 시험 예정)</span>
+                    <span><i class="fa-solid fa-award"></i> 장소: 국가기술자격 / 서울 실기 연습</span>
+                </div>
+                <table class="activity-details">
+                    <tr>
+                        <th>기획 의도</th>
+                        <td>지구 내면이 빚어낸 원석 결정체의 과학적 구조와 아름다움을 정교하게 관찰하고 판별하는 미시적 안목 육성.</td>
+                    </tr>
+                    <tr>
+                        <th>진행 과정</th>
+                        <td>이론 필기시험 독학 대비 및 합격 달성 → 루페, 굴절계, 편광기, 비중액 등 활용한 보석 실기 판별 집중 실습 중 (서울 왕복, 9월 시험 대비).</td>
+                    </tr>
+                    <tr>
+                        <th>실천 결과</th>
+                        <td>필기 시험 합격 달성 완료, 9월 최종 실기 합격을 목표로 정밀 감정 감각 연마 중.</td>
+                    </tr>
+                </table>
+
+                <div class="photo-gallery">
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <img src="11.PNG" alt="보석감정사 필기 합격 내역">
+                        </div>
+                        <p class="photo-caption">2026년 정기 기능사 3회 보석감정사 필기 시험 합격 내역</p>
+                    </div>
+                    <div class="photo-container">
+                        <div class="photo-wrapper">
+                            <img src="KakaoTalk_20260818_084438725_02.jpg" alt="보석감정 실기 실습">
+                        </div>
+                        <p class="photo-caption">강남보석아카데미 - 보석감정사 실기 판별 및 감정서 작성 실습</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interview Connection Section -->
+    <section class="interview-box">
+        <h2 class="section-title"><i class="fa-solid fa-quote-left"></i> 철학적 이정표: 황대권 선생님과의 대화</h2>
+        <span class="interview-header-sub">(2026년 8월 11일 화요일)</span>
+
+        <p style="font-size: 0.96rem; color: var(--text-sub); line-height: 1.7;">
+            여러 분야에서의 배움과 실천을 이어가던 중, 황대권 작가님과의 깊은 대화를 통해 진행한 활동들이 통합될 궁극적인 지향점을 정리하게 되었습니다.
+        </p>
+
+        <div class="photo-gallery" style="margin-top: 20px; margin-bottom: 25px;">
+            <div class="photo-container">
+                <div class="photo-wrapper">
+                    <!-- Corrected: 백척간두 책 사진 적용 -->
+                    <img src="KakaoTalk_20260818_084353186_05.jpg" alt="다시 백척간두에 서서 도서 표지">
+                </div>
+                <p class="photo-caption">황대권 저서 『다시 백척간두에 서서』</p>
+            </div>
+            <div class="photo-container">
+                <div class="photo-wrapper">
+                    <img src="5555.jpg" alt="황대권 선생님 친필 싸인">
+                </div>
+                <p class="photo-caption">2026.8.11 황대권 선생님 친필 서명 ("김민주 님께")</p>
+            </div>
+        </div>
+
+        <div class="interview-quote">
+            "내가 어떤 자리에, 어디에 있든 내 자아를 실현할 수 있으면 그건 성공한 인생이다."
+        </div>
+
+        <ul class="interview-points">
+            <li><strong>30% 이론, 70% 실천:</strong> 관념적인 공부에 그치지 않고 몸으로 부딪히며 삶 속에서 완성해 나가는 삶의 중요성 확인.</li>
+            <li><strong>체계적인 기록과 공유 (야생초 도서관):</strong> 옥중 독서에서 시작하여 후학들을 위한 대안적 지식의 장을 넓혀가는 지혜 학습.</li>
+            <li><strong>공간과 환경의 역설:</strong> 백척간두와 감옥이라는 한계 속에서도 야생초를 통해 내면을 확장했던 것처럼, 현재 내가 서 있는 자리에서 주체적으로 의미를 창조하는 삶 표방.</li>
+        </ul>
+
+        <div class="keyword-list">
+            <span class="keyword-tag">#실천적_지식</span>
+            <span class="keyword-tag">#30:70_법칙</span>
+            <span class="keyword-tag">#주체적_자아실현</span>
+            <span class="keyword-tag">#야생초_도서관</span>
+            <span class="keyword-tag">#백척간두에서의_성장</span>
+        </div>
+    </section>
+
+    <!-- Conclusion & Future Plan -->
+    <section class="next-plan-box">
+        <h3><i class="fa-solid fa-flag"></i> 향후 계획 (Next Step)</h3>
+        <p style="font-size: 0.95rem; color: var(--text-main); line-height: 1.8;">
+            1. <strong>9월 보석감정사 실기 시험</strong><br>
+            2. <strong>양&한의학 독학 및 인간-생태 통합 치유 네트워크 구축, 변리사 (2028 시험)</strong><br>
+            3. <strong>지속적 친환경 농업 및 교육화</strong>
+        </p>
+    </section>
+
+    <footer class="report-footer">
+        <p>© 2026 Kim Minju. All rights reserved.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
